@@ -1,16 +1,22 @@
+import { StyledCountryName } from './styles'
+
 const CountryList = ({countryList=[]}) => {
   return (
     <>
-    { countryList.map(data => {
+    {
+      countryList.map((data, key) => {
         if (data) {
           return (
-            <div key={data.name}>
-              <h1>{data.name}</h1>
-	    </div>
-    	   )
-    	 }
-    	 return null
-    }) }
+            <div key={key}>
+              <StyledCountryName>
+                {data.name}
+              </StyledCountryName>
+	          </div>
+    	    )
+    	  }
+    	  return null
+      })
+    }
     </>
   )
 }

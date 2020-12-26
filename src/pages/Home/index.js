@@ -1,8 +1,11 @@
+import { StyledContainerHome } from './styles'
 import Search from '../../components/layout/Search'
 
-function Home() {
+const Home = () => {
   return (
-    <Search />
+    <StyledContainerHome>
+      <Search />
+    </StyledContainerHome>
   )
 }
 
